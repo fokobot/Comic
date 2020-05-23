@@ -1,6 +1,8 @@
-<h1 *ngIf="heroes; else villains">Heroes <small>Marvel y DC </small></h1>
-<ng-template #villains><h1>Villanos <small>Marvel y DC </small></h1></ng-template>
+<h1>Personajes</h1>
 <hr>
+<div *ngIf="hero.length == 0" class="alert alert-primary" role="alert">
+  No se encontraron personajes con su busqueda: {{busqueda}}
+</div>
 <div class="card-columns">
   <div class="card animated fadeIn fast" *ngFor="let heros of hero;">
     <!-- <img src="{{heros.img}}" class="card-img-top" alt="{{heros.nombre}}"> -->
